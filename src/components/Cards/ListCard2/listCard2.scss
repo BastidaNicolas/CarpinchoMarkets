@@ -1,0 +1,190 @@
+.list-card-2-container {
+    height: auto;
+
+    .card-header {
+        padding: 0.9375rem 0;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--black03);
+        }
+
+        .position {
+            min-width: calc(82.25rem*0.0342);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .exchange-name {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            overflow-x: hidden;
+
+            .image-container {
+                min-width: 23px;
+                min-height: 23px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin-right: 0.3125rem;
+            }
+        }
+
+        .trust-score {
+            text-align: end;
+            min-width: calc(82.25rem*0.10);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                color: var(--green);
+            }
+
+            .score-bar-container {
+                margin: 0 1rem;
+                height: 10px;
+                width: 100%;
+                background-color: rgba(4, 209, 4, 0.2);
+                border-radius: 2rem;
+
+                .score-bar {
+                    height: 100%;
+                    background-color: var(--green);
+                    border-radius: 2rem;
+                }
+            }
+        }
+
+        .trade-vol {
+            text-align: end;
+            width: calc(82.25rem*0.16);
+        }
+
+        .estab {
+            margin-right: 0.9375rem;
+            text-align: end;
+            width: calc(82.25rem*0.10);
+        }
+
+        @media screen and (max-width: 57.875rem) {
+            .estab {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 45rem) {
+            .trade-vol {
+                display: none;
+            }
+
+            .position {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .desc-contianer {
+        padding: 0 0.9375rem;
+        max-height: 0;
+        overflow-y: hidden;
+
+        .desc-info {
+            display: none;
+            flex-direction: column;
+            padding-bottom: 0.4375rem;
+
+            .trade-vol {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .estab {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .description {
+            .website-link {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 0.9375rem;
+            }
+        }
+    }
+
+    .show-desc {
+        max-height: 5000px;
+        padding-top: 0.9375rem;
+        padding-bottom: 0.9375rem;
+    }
+
+    @media screen and (max-width: 45rem) {
+        .desc-contianer {
+            padding-left: 0;
+            padding-right: 0;
+
+            .desc-info {
+                display: flex;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 26.25rem) {
+    .list-card-2-container {
+        p {
+            font-size: 5.625vw;
+        }
+
+        .card-header {
+
+
+            .exchange-name {
+
+
+                .image-container {
+                    // width: 8.4375vw;
+                    // height: 8.4375vw;
+                    margin-right: 1.5625vw;
+                }
+            }
+
+            .trust-score {
+                .score-bar-container {
+                    margin: 0 .5rem;
+                }
+            }
+
+        }
+
+        .desc-contianer {
+
+            .desc-info {
+                display: flex;
+
+                .trade-vol {
+                    padding-top: 1.5625vw;
+                    padding-bottom: 1.5625vw;
+                }
+
+                .estab {
+                    padding-top: 1.5625vw;
+                    padding-bottom: 1.5625vw;
+                }
+            }
+
+        }
+
+        .show-desc {
+            padding-top: 3.125vw;
+            padding-bottom: 3.125vw;
+        }
+    }
+}

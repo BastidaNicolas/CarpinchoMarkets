@@ -1,0 +1,476 @@
+// COLORS
+@keyframes inf-scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+:root {
+    --white: rgba(255, 255, 255, 1);
+    --white95: rgba(255, 255, 255, 0.95);
+    --white85: rgba(255, 255, 255, 0.85);
+    --white80: rgba(255, 255, 255, 0.8);
+    --white75: rgba(255, 255, 255, 0.75);
+    --white70: rgba(255, 255, 255, 0.7);
+    --white15: rgba(255, 255, 255, 0.15);
+    --white05: rgba(255, 255, 255, 0.05);
+    --black: rgba(0, 0, 0, 1);
+    --black80: rgba(0, 0, 0, 0.8);
+    --black70: rgba(0, 0, 0, 0.7);
+    --black30: rgba(0, 0, 0, 0.3);
+    --black15: rgba(0, 0, 0, 0.15);
+    --black05: rgba(0, 0, 0, 0.05);
+    --black03: rgba(0, 0, 0, 0.03);
+    --green: rgb(39, 174, 96);
+    --red: rgba(235, 87, 87, 1);
+    --blue: rgba(89, 145, 247, 1);
+    --carpCol: linear-gradient(97.67deg, rgba(171, 227, 217, 1) 0%, rgba(209, 74, 247, 1) 100%);
+}
+
+* {
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 112.7%;
+    box-sizing: border-box;
+}
+
+#style-4::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+#style-4::-webkit-scrollbar {
+    width: 0.2vw;
+    background-color: none;
+}
+
+#style-4::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border: 2px solid #555555;
+}
+
+a {
+    text-decoration: none;
+}
+
+// .App{
+//     // background-color: rgb(224, 224, 224);
+// }
+main {
+    min-height: 80vh;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--black80);
+    // color: red;
+}
+.xl {
+    display: block;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.875rem;
+    // color: red;
+}
+.l {
+    font-size: 1.875rem;
+}
+
+h3 {
+    font-size: 1.5625rem;
+    color: var(--black70);
+    // color: red;
+}
+.xm{
+    // display: inline-block;
+    font-size: 1.5625rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    
+    // color: red;
+}
+.m {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 0.9375rem;
+    color: var(--black70);
+    // color: red;
+}
+.s {
+    // display: inline-block;
+    font-size: 0.9375rem;
+}
+
+p {
+    font-size: 1.125rem;
+    // color: red;
+}
+
+.lightMode {
+    background-color: white;
+    transition: .5s;
+
+    .xl {
+        color: var(--black80);
+    }
+
+    .l {
+        color: var(--black80);
+    }
+
+    .xm {
+        color: var(--black70);
+    }
+
+    .xm-sub {
+        // color: var(--white75);
+    }
+
+    .m {
+        color: var(--black80);
+    }
+
+    .s {
+        color: var(--black70);
+    }
+    @media screen and (max-width: 26.25rem){
+        .s {
+            color: var(--black80);
+        }
+    }
+
+    .xs {
+        color: var(--black70);
+    }
+
+    .content {
+        color: var(--black80);
+    }
+
+    .link {
+        color: var(--blue);
+    }
+    .solid{
+        color: var(--black);
+    }
+
+    .icon {
+        color: var(--black80);
+
+        svg {
+            color: var(--black80);
+        }
+    }
+
+    .full-border {
+        border: 1px solid var(--black15);
+    }
+
+    .top-border {
+        border-top: 1px solid var(--black15);
+    }
+
+    .right-border {
+        border-right: 1px solid var(--black15);
+    }
+
+    .bottom-border {
+        border-bottom: 1px solid var(--black15);
+    }
+
+    .left-border {
+        border-left: 1px solid var(--black15);
+    }
+    .bkg-clr-2 {
+        background-color: var(--white);
+        transition: .5s;
+    }
+    .btn-simple-theme{
+        color: var(--black70);
+    }
+    .button-theme {
+        color: var(--black70);
+        border: 1px var(--black15) solid;
+
+        a {
+            color: var(--blue);
+            text-decoration: underline;
+        }
+
+        select {
+            background-color: var(--white);
+            color: var(--black80);
+        }
+    }
+
+    @media screen and (max-width: 41.3125rem) {
+        .button-theme {
+            a {
+                color: var(--black70);
+                text-decoration: none;
+            }
+        }
+    }
+
+    ul {
+        h4 {
+            color: var(--black80);
+        }
+    }
+
+    h1 {
+        color: var(--black80);
+        // color: red;
+    }
+
+    h2 {
+        // color: red;
+    }
+
+    h3 {
+        color: var(--black70);
+        // color: red;
+    }
+
+    h4 {
+        color: var(--black70);
+        // color: red;
+    }
+
+    h5 {
+        color: var(--black70);
+        // color: red;
+    }
+
+    p {
+        color: var(--black80);
+        // color: red;
+    }
+}
+
+.darkMode {
+    background-color: #292929;
+    transition: .5s;
+
+    .xl {
+        color: var(--white95);
+    }
+
+    .l {
+        color: var(--white95);
+    }
+
+    .xm {
+        color: var(--white85);
+    }
+
+    .xm-sub {
+        color: var(--white75);
+    }
+
+    .m {
+        color: var(--white85);
+    }
+
+    .s {
+        color: var(--white75);
+    }
+    @media screen and (max-width: 26.25rem){
+        .s {
+            color: var(--white85);
+        }
+    }
+
+    .xs {
+        color: var(--white70);
+    }
+
+    .content {
+        color: var(--white85);
+    }
+
+    .link {
+        color: var(--blue);
+    }
+    .solid{
+        color: var(--white);
+    }
+
+    .icon {
+        color: var(--white85);
+
+        svg {
+            color: var(--white85);
+        }
+    }
+
+    .bkg-clr {
+        background-color: var(--white05);
+    }
+    .bkg-clr-2 {
+        background-color: #292929;
+        transition: .5s;
+    }
+
+    .full-border {
+        border: 1px solid var(--white15);
+    }
+
+    .top-border {
+        border-top: 1px solid var(--white15);
+    }
+
+    .right-border {
+        border-right: 1px solid var(--white15);
+    }
+
+    .bottom-border {
+        border-bottom: 1px solid var(--white15);
+    }
+
+    .left-border {
+        border-left: 1px solid var(--white15);
+    }
+    .btn-simple-theme{
+        background-color: var(--white05);
+        color: var(--white70);
+    }
+    .button-theme {
+        color: var(--white70);
+        border: 1px var(--white15) solid;
+        background-color: var(--white05);
+
+        a {
+            color: var(--blue);
+            text-decoration: underline;
+        }
+        select {
+            background-color: var(--black05);
+            color: var(--white80);
+        }
+        option{
+            background-color: var(--black80);
+        }
+    }
+
+    @media screen and (max-width: 41.3125rem) {
+        .button-theme {
+            a {
+                color: var(--white70);
+                text-decoration: none;
+            }
+        }
+    }
+
+
+    ul {
+        h4 {
+            color: var(--white95);
+        }
+    }
+
+    h1 {
+        color: var(--white95);
+        // color: red;
+        // span{
+        //     color: var(--white70);
+        // }
+    }
+
+    h2 {
+        // color: red;
+    }
+
+    h3 {
+        color: var(--white95);
+        // color: red;
+    }
+
+    h4 {
+        color: var(--black70);
+        // color: red;
+    }
+
+    h5 {
+        color: var(--white80);
+        // color: red;
+    }
+
+    p {
+        color: var(--black80);
+        // color: red;
+    }
+}
+
+// h6{
+//     font-size: ;
+// }
+.section-container {
+    max-width: 82.25rem;
+    margin: auto;
+}
+
+@media screen and (max-width: 82.25rem) {
+    .section-container {
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+    }
+}
+
+@media screen and (max-width: 26.25rem) {
+    h1 {
+        font-size: 7.8125vw;
+    }
+    .xl {
+        font-size: 7.8125vw;
+    }
+
+
+    h2 {
+        font-size: 1.875rem;
+    }
+    .l {
+        font-size: 1.875rem;
+    }
+
+    h3 {
+        font-size: 4.6875vw;
+    }
+    .xm{
+        font-size: 4.6875vw;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        color: var(--black70);
+    }
+    .m {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 4.6875vw;
+    }
+    .s {
+        font-size: 4.6875vw;
+    }
+
+    .section-container {
+        margin-left: 3.125vw;
+        margin-right: 3.125vw;
+    }
+}

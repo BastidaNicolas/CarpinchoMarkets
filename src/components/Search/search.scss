@@ -1,0 +1,167 @@
+.search-light {
+    background-color: var(--black05);
+
+    svg {
+        color: rgb(110, 110, 110);
+    }
+
+    input {
+
+        &:focus~svg,
+        &:valid~svg {
+            color: var(--black80);
+        }
+    }
+
+    .search-result {
+        background-color: rgb(242, 242, 242);
+        scrollbar-color: var(--black30) rgba(0, 0, 0, 0);
+    }
+
+    &:focus-within {
+        box-shadow: 0px 2px 4px var(--black15);
+    }
+}
+
+.search-dark {
+    background-color: var(--white05);
+
+    svg {
+        color: rgb(110, 110, 110);
+    }
+
+    input {
+        color: var(--white80);
+
+        &:focus~svg,
+        &:valid~svg {
+            color: var(--white80);
+        }
+    }
+
+    .search-result {
+        background-color: rgb(52, 52, 52);
+        scrollbar-color: var(--white70) rgba(0, 0, 0, 0);
+
+        .section-header {}
+    }
+
+    &:focus-within {
+        box-shadow: 0px 2px 4px var(--black30);
+    }
+}
+
+.search-container {
+    height: 2.5rem;
+    width: 11.25rem;
+    border-radius: 6px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    transition: all .5s;
+
+    svg {
+        margin-right: 0.6875rem;
+        width: 1.125em;
+        height: 1.125em;
+        box-sizing: border-box;
+        transition: all .5s;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        margin-left: 0.6875rem;
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 1.125em;
+        box-sizing: border-box;
+
+        &:valid~.search-result {
+            display: block;
+        }
+    }
+
+    .search-result {
+        display: none;
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        border-radius: 6px;
+        width: 200%;
+        max-height: 500px;
+        overflow-y: scroll;
+        scrollbar-width: thin;
+
+        .search-section {
+            .section-header {
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+    .search-result-none{
+        display: none;
+    }
+
+}
+
+.main {
+    display: none;
+}
+
+@media screen and (max-width: 57.875rem) {
+    .main {
+        display: flex;
+        margin: 0.625rem;
+        height: 2.5rem;
+        width: auto;
+
+        svg {
+            margin-right: 0.6875rem;
+            width: 1.125em;
+            height: 1.125em;
+        }
+
+        input {
+            margin-left: 0.6875rem;
+            font-size: 1.125em;
+        }
+        .search-result {
+            width: 100%;
+            max-height: 45vh;
+        }
+    }
+}
+
+@media screen and (max-width: 26.25rem) {
+    .main {
+        margin: 3.125vw;
+        height: 12.5vw;
+        width: auto;
+
+        svg {
+            margin-right: 3.125vw;
+            width: 5.625vw;
+            height: 5.625vw;
+        }
+
+        input {
+            margin-left: 3.125vw;
+            font-size: 5.625vw;
+        }
+        .search-result {
+            top: 15vw;
+    
+            .search-section {
+                .section-header {
+                    padding: 2.1vw 4.3vw;
+                }
+            }
+        }
+    }
+}

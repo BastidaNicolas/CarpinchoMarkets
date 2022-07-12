@@ -1,0 +1,243 @@
+.coin-page-container {
+    margin-top: 1.25rem;
+
+    .coin-main-content {
+        display: grid;
+        grid-template-columns: minmax(320px, 1.75fr) minmax(320px, 1.25fr);
+        column-gap: 15px;
+
+        .chart-content {
+            .loading-chart {
+                // background-color: var(--white);
+                width: 100%;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .chart-settings {
+                color: var(--black70);
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                row-gap: 15px;
+                margin-bottom: 15px;
+
+                .chart-type-btns-container {
+                    display: flex;
+                    width: fit-content;
+                    border-radius: 5px;
+                    
+                    .chart-type-btns {
+                        width: 38px;
+                        height: 36px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: var(--black03);
+                        }
+                    }
+
+                    .linear-btn {
+                    }
+
+                    .candle-btn {}
+                }
+                .chart-time-btns-container {
+                    justify-self: end;
+                    display: flex;
+                    width: 351px;
+                    border-radius: 5px;
+
+                    .chart-time-btns {
+                        font-size: 14px;
+                        width: 100%;
+                        height: 36px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: var(--black03);
+                        }
+                    }
+                    @media screen and (max-width: 28.4375rem) {
+                        .hide-btn{
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .persentage-chart-container {
+                display: flex;
+                border-radius: 10px;
+
+                .persentage-chart-column {
+                    width: 100%;
+                    height: 62px;
+
+                    .chart-grid {
+                        width: 100%;
+                        height: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .persentage-header {
+                        p {
+                            color: var(--black80);
+                        }
+                    }
+
+                    .persentage-value {}
+                }
+            }
+        }
+
+        .coin-info {
+            border-radius: 10px;
+            padding: 15px 20px;
+
+            .border-btm {
+                border-bottom: 1px solid var(--black15);
+            }
+
+            ul {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px 0;
+
+                    .title {
+                        max-width: 46%;
+                    }
+
+                    .value {
+                        overflow-x: scroll;
+                        text-align: right;
+
+                        -ms-overflow-style: none;
+                        scrollbar-width: none;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+
+
+                        .date {
+                            display: block;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .coin-about-section {
+        padding: 2rem 0;
+        a{
+            color: var(--blue);
+        }
+        .xl {
+            margin-bottom: 15px;
+        }
+    }
+    
+
+    @media screen and (max-width: 57.875rem) {
+        .coin-main-content {
+            grid-template-columns: minmax(200px, 1fr);
+            row-gap: 10px;
+        }
+    }
+
+    @media screen and (max-width: 28.2rem) {
+        .coin-main-content {
+            .chart-content {
+                .chart-settings {
+                    grid-template-columns: auto;
+
+                    .chart-time-btns-container {
+                        justify-self: start;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 26.25rem) {
+        .coin-main-content {
+            .chart-content {
+                .loading-chart {
+                    height: 250px;
+                }
+
+                .chart-settings {
+                    .chart-time-btns-container {
+                        width: 100%;
+                    }
+                }
+
+                .persentage-chart-container {
+                    border-radius: 10px;
+
+                    .persentage-chart-column {
+                        height: 62px;
+
+                        .persentage-header {
+                            p {
+                                font-size: 3.75vw;
+                            }
+                        }
+
+                        .persentage-value {
+                            span {
+                                font-size: 3.5vw;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .coin-info {
+                border-radius: 3.125vw;
+                padding: 3.125vw 4.6875vw;
+
+                ul {
+                    li {
+                        .title {
+                            max-width: 40%;
+                        }
+
+                        p {
+                            font-size: 5vw;
+                        }
+
+                        span {
+                            font-size: 5vw;
+                        }
+
+                        .span-percent {
+                            font-size: 4.6875vw;
+                        }
+
+                        padding: 3.125vw 0;
+
+                        .value {
+                            .date {
+                                font-size: 3.75vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

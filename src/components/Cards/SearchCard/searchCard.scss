@@ -1,0 +1,22 @@
+.search-card-container{
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    img{
+        margin-right: .5rem;
+    }
+    span{
+        overflow-x: hidden;
+    }
+    &:hover{
+        background-color: var(--black05);
+    }
+}
+@media screen and (max-width: 26.25rem) {
+    .search-card-container{
+        padding: 2.1vw 4.3vw;
+        img{
+            margin-right: 2.1vw;
+        }
+    }
+}

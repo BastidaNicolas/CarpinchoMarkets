@@ -1,0 +1,219 @@
+.list-card-container {
+    &:hover {
+        cursor: pointer;
+        background-color: var(--black03);
+    }
+
+    .card-content-container {
+
+        .card-content {
+            display: flex;
+
+            .position {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: calc(82.25rem*0.0342);
+                padding: 0.9375rem 0;
+            }
+
+            .name {
+                display: flex;
+                align-items: center;
+                width: calc(82.25rem*0.2612);
+                padding: 0.9375rem 0;
+
+                .img-container {
+                    width: 23px;
+                    height: 23px;
+                    // border-radius: 100%;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    margin-right:  0.3125rem;
+                }
+
+                .info-container {
+                    width: 100%;
+
+                    .name-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .coin-name {
+                            flex-grow: 1;
+                        }
+
+                        .symbol {
+                            font-size:  0.9375rem;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    .price-container {
+                        display: none;
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+
+            .price {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: calc(82.25rem*0.14);
+                padding: 0.9375rem 0;
+            }
+
+            .percent {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: calc(82.25rem*0.06);
+                padding: 0.9375rem 0;
+            }
+
+            .vol-24h {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: calc(82.25rem*0.1376);
+                padding: 0.9375rem 0;
+            }
+
+            .mkt-cap {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: calc(82.25rem*0.1376);
+                padding: 0.9375rem 0;
+            }
+
+            .sparkline {
+                display: flex;
+                justify-content: flex-end;
+                width: calc(82.25rem*0.1143);
+            }
+
+            @media screen and (max-width: 75rem) {
+                .sparkline {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-width: 65rem) {
+                .h1-time {
+                    display: none;
+                }
+
+                .d7-time {
+                    display: none;
+                }
+            }
+        }
+
+        @media screen and (max-width: 57.875rem) {
+            .card-content {
+
+                .position {
+                    justify-content: flex-start;
+                }
+
+                .name {
+                    display: flex;
+                    align-items: center;
+                    flex-grow: 1;
+
+                    .img-container {
+                        width: 2.625rem;
+                        height: 2.625rem;
+                    }
+
+                    .info-container {
+                        width: fit-content;
+
+                        .name-container {
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+
+                            .symbol {
+                                font-size: 0.9375rem;
+                                text-transform: uppercase;
+                            }
+                        }
+
+                        .price-container {
+                            display: block;
+                            font-size: 1.25rem;
+                        }
+                    }
+                }
+
+                .h24-time {
+                    display: none;
+                }
+
+                .d7-time {
+                    display: flex;
+                    p{
+                        font-size: 1.5625rem;
+                    }
+                }
+
+                .price {
+                    display: none;
+                }
+
+                .vol-24h {
+                    display: none;
+                }
+
+                .mkt-cap {
+                    display: none;
+                }
+
+            }
+        }
+        @media screen and (max-width: 26.25rem){
+            .card-content {
+                .position {
+                    font-size: 4.6875vw;
+                    padding: 3.125vw 0;
+                }
+
+                .name {
+                    padding: 3.125vw 0;
+                    .img-container {
+                        width: 11.5625vw;
+                        height: 11.5625vw;
+                        margin-right: 1.5625vw;
+                    }
+
+                    .info-container {
+                        .name-container {
+                            p{
+                               font-size: 4.6875vw;
+                            }
+                        }
+
+                        .price-container {
+                            font-size: 5.625vw;
+                        }
+                    }
+                }
+                .percent{
+                    padding: 3.125vw 0;
+                }
+                .d7-time {
+                
+                    p{
+                        font-size: 6.25vw;
+                    }
+                }
+            }
+        }
+    }
+}

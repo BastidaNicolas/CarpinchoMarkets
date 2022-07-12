@@ -1,0 +1,284 @@
+.coins-page-container {
+    margin-top: 1.25rem;
+
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+
+        .filter-main {
+            display: flex;
+
+            .search-container {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .more-fltr-btn {
+                display: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .filter-options {
+            display: flex;
+
+            .select-container {
+                position: relative;
+                border-radius: 0.3125rem;
+                // border: 1px solid var(--black15);
+                margin-right: 0.9375rem;
+
+                select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -o-appearance: none;
+                    // background-color: var(--white);
+                    font-size: 0.9375rem;
+                    border: none;
+                    border-radius: 0.3125rem;
+                    padding: 0.625rem 1.8125rem 0.625rem 0.9375rem;
+                    // color: var(--black70);
+                    width: 100%;
+
+                    &:hover,
+                    &:focus {
+                        cursor: pointer;
+                        // color: var(--black80);
+                    }
+
+                    // &:hover~svg,
+                    // &:focus~svg {
+                    //     color: var(--black80);
+                    // }
+
+                    // option {
+                    //     color: var(--black70);
+                    // }
+                }
+
+                svg {
+                    font-size: 0.625rem;
+                    position: absolute;
+                    right: 8%;
+                    bottom: 35%;
+                    // color: var(--black70);
+                }
+            }
+        }
+    }
+
+    .list-header {
+        display: flex;
+
+        .position {
+            display: flex;
+            justify-content: center;
+            width: calc(82.25rem*0.0342);
+            padding: 0.9375rem 0;
+        }
+
+        .name {
+            width: calc(82.25rem*0.2612);
+            padding: 0.9375rem 0;
+        }
+
+        .price {
+            display: flex;
+            justify-content: flex-end;
+            width: calc(82.25rem*0.14);
+            padding: 0.9375rem 0;
+        }
+
+        .percent {
+            display: flex;
+            justify-content: flex-end;
+            width: calc(82.25rem*0.06);
+            padding: 0.9375rem 0;
+        }
+
+        .vol-24h {
+            display: flex;
+            justify-content: flex-end;
+            width: calc(82.25rem*0.1376);
+            padding: 0.9375rem 0;
+        }
+
+        .mkt-cap {
+            display: flex;
+            justify-content: flex-end;
+            width: calc(82.25rem*0.1376);
+            padding: 0.9375rem 0;
+        }
+
+        .sparkline {
+            display: flex;
+            justify-content: flex-end;
+            width: calc(82.25rem*0.1143);
+            padding: 0.9375rem 0;
+        }
+
+        @media screen and (max-width: 75rem) {
+            .sparkline {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 65rem) {
+            .h1-time {
+                display: none;
+            }
+
+            .d7-time {
+                display: none;
+            }
+        }
+    }
+
+    .pagination-container {
+        padding: 1rem 0 3rem 0;
+
+        .show-more-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            font-size: 15px;
+            width: 150px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            &:hover {
+                cursor: pointer;
+                // color: var(--black80);
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 57.875rem) {
+    .coins-page-container {
+        margin-top: 0.625rem;
+
+        .filter-container {
+            position: relative;
+            margin-bottom: 0.625rem;
+
+            .filter-main {
+                align-items: center;
+
+                // .search-container {}
+
+                .more-fltr-btn {
+                    display: block;
+                    width: 1.875rem;
+                    height: 1.875rem;
+                }
+            }
+
+            .filter-options {
+                // display: flex;
+                // translate3d(45vw,-15vw,0)
+                transform: translate3d(10rem,-3rem,0) scale3d(0, 0, 1);
+                padding: .5rem;
+                top: 3.5rem;
+                right: 0;
+                position: absolute;
+                flex-direction: column;
+                overflow: hidden;
+                transition: all .2s;
+                border-radius: 5px;
+                // background-color: var(--white);
+
+                .select-container {
+                    margin: 0.25rem 0;
+                }
+            }
+
+            .filter-options-show {
+                transform: translate3d(0,0,0) scale3d(1, 1, 1);
+            }
+        }
+
+        .list-header {
+
+            .position {
+                justify-content: flex-start;
+            }
+
+            .name {
+                flex-grow: 1;
+            }
+
+            .price {
+                display: none;
+            }
+
+            .h24-time {
+                display: none;
+            }
+
+            .d7-time {
+                display: flex;
+            }
+
+            .vol-24h {
+                display: none;
+            }
+
+            .mkt-cap {
+                display: none;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 26.25rem) {
+    .coins-page-container {
+        margin-top: 3.125vw;
+
+        .filter-container {
+            margin-bottom: 3.125vw;
+
+            .filter-main {
+                display: flex;
+
+
+                .search-container {
+                    margin: 0 3.125vw 0 0;
+                }
+
+                .more-fltr-btn {
+                    width: 9.375vw;
+                    height: 9.375vw;
+                }
+            }
+            .filter-options {
+                padding: 2.5vw;
+                top: 15vw;
+            }
+        }
+
+        .list-header {
+
+            .position {
+                justify-content: flex-start;
+                padding: 1.5625vw 0;
+            }
+
+            .name {
+                flex-grow: 1;
+                padding: 1.5625vw 0;
+            }
+
+            .d7-time {
+                display: flex;
+                padding: 1.5625vw 0;
+            }
+        }
+    }
+}
